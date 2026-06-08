@@ -1,0 +1,202 @@
+/* ==========================================================================
+   PALETA DE COLORES: COFFEE EXPRESS (Café & Naranja)
+   ========================================================================== */
+
+/* --- ESTILOS GENERALES Y FONDO --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Un fondo sutil crema/arena para que resalten los tonos café */
+    background-color: #f7f3ee; 
+    color: #4a3b32; /* Café oscuro para el texto principal */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* --- CONTENEDOR PRINCIPAL DE LA CALCULADORA --- */
+.calculadora-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    /* Sombra suave con tono café para dar profundidad */
+    box-shadow: 0 10px 30px rgba(74, 59, 50, 0.15); 
+    width: 100%;
+    max-width: 450px;
+    border: 2px solid #e6ded6;
+}
+
+/* --- TÍTULO PRINCIPAL --- */
+h1 {
+    text-align: center;
+    color: #d35400; /* Naranja del logo para el título */
+    margin-bottom: 5px;
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Subtítulo dinámico para el nombre del local */
+h1::after {
+    content: "Coffee Express";
+    display: block;
+    font-size: 1rem;
+    color: #6e5241; /* Café medio */
+    text-transform: none;
+    margin-top: 5px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* --- SECCIONES FORMULARIO --- */
+.seccion {
+    margin-bottom: 20px;
+    padding-bottom: 18px;
+    border-bottom: 1px dashed #e6ded6;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #5c473c; /* Café oscuro sutil */
+    font-size: 0.95rem;
+}
+
+/* --- INPUTS Y SELECTS --- */
+select, input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 2px solid #dcd1c4;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background-color: #faf8f5;
+    color: #4a3b32;
+    transition: all 0.3s ease;
+}
+
+select:focus, input:focus {
+    outline: none;
+    border-color: #e67e22; /* Se ilumina en naranja al dar click */
+    background-color: #ffffff;
+}
+
+/* --- BOTONES --- */
+button {
+    background-color: #e67e22; /* Naranja base */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+    margin-top: 12px;
+    box-shadow: 0 4px 6px rgba(230, 126, 34, 0.2);
+}
+
+button:hover {
+    background-color: #d35400; /* Naranja más oscuro al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(211, 84, 0, 0.3);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* --- LISTA DE PRODUCTOS --- */
+.lista-compras {
+    max-height: 160px;
+    overflow-y: auto;
+    background: #fdfaf7; /* Fondo crema muy claro */
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    border: 1px solid #ebdccb;
+}
+
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #f3ebe1;
+    color: #5c473c;
+}
+
+.item-carrito span:last-child {
+    font-weight: bold;
+    color: #e67e22; /* Los precios sumados se ven en naranja */
+}
+
+.sin-productos {
+    color: #a89385;
+    text-align: center;
+    margin: 10px 0;
+    font-style: italic;
+}
+
+/* --- CAJA DEL TOTAL --- */
+.total-box {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: right;
+    color: #4a3b32; /* Café oscuro elegante */
+    margin-top: 10px;
+    border-top: 2px solid #6e5241;
+    padding-top: 10px;
+}
+
+.total-box span {
+    color: #d35400; /* El número del total resalta en naranja */
+}
+
+/* --- SECCIÓN DE PAGO Y VUELTAS --- */
+.btn-pagar {
+    background-color: #6e5241; /* Botón de pagar en color Café Expreso */
+    box-shadow: 0 4px 6px rgba(110, 82, 65, 0.2);
+}
+
+.btn-pagar:hover {
+    background-color: #4a3b32; /* Café más oscuro al pasar el mouse */
+    box-shadow: 0 6px 12px rgba(74, 59, 50, 0.3);
+}
+
+.resultado-vueltas {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 18px;
+    display: none; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Alerta: Si todo sale bien (Vueltas verdes suaves con texto café/verde) */
+.resultado-vueltas-exito {
+    background-color: #ebf7ee;
+    color: #27ae60;
+    border: 1px solid #c2ebd0;
+}
+
+/* Alerta: Si falta dinero (Rojo/Naranja de advertencia) */
+.resultado-vueltas-error {
+    background-color: #fdf2f2;
+    color: #c0392b;
+    border: 1px solid #f8d7da;
+}
+
+/* --- BOTÓN NUEVA CUENTA --- */
+.btn-limpiar {
+    background-color: #7f8c8d; /* Color gris neutro para no competir con el logo */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-limpiar:hover {
+    background-color: #616a6b;
+}

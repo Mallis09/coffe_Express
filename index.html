@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Mágica de Tiendita</title>
+    <link rel="stylesheet" href="/Style.css">
+</head>
+<body>
+
+<div class="calculadora-container">
+    <h1>Calculadora Mágica</h1>
+
+    <div class="seccion">   
+        <label for="producto-select">Selecciona un Producto:</label>
+        <select id="producto-select">
+            <option value="2500">Chocorramo - $2.500</option>
+            <option value="1300">Tinto - $1.300</option>
+            <option value="2500">Express - $2.500</option>
+            <option value="3000">Cafe  - $3.000</option>
+            <option value="3500">cocacola 350 - $3.500</option>
+        </select>
+        <button id="btn-agregar">Agregar a la Cuenta</button>
+    </div>
+
+    <div class="seccion">
+        <label>Productos agregados:</label>
+        <div id="lista-compras" class="lista-compras">
+            <p class="sin-productos">No hay productos en la cuenta</p>
+        </div>
+        <div class="total-box">Total: $<span id="total-cuenta">0</span></div>
+    </div>
+
+    <div class="seccion">
+        <label for="pago-input">¿Con cuánto pagan? (Escribe el valor):</label>
+        <input type="number" id="pago-input" placeholder="Ej: 50000" min="0">
+        <button id="btn-calcular-vueltas" class="btn-pagar">Calcular Vueltas</button>
+        
+        <div id="resultado-vueltas" class="resultado-vueltas"></div>
+    </div>
+
+    <button id="btn-limpiar" class="btn-limpiar">Nueva Cuenta</button>
+</div>
+
+<script src="/Script.js"></script>
+</body>
+</html>
